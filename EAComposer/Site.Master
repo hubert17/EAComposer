@@ -1,0 +1,249 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EAComposer.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%: Page.Title %> - EA Composer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="css/eacomposer2.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+<body>
+    <form runat="server">
+        <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-opaque">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                  
+                <div class="col-xs-8 col-md-12">
+                <a class="navbar-brand" href="#page-top" >
+                     <img class="img-responsive" src="Content/logo-bg.png"" alt="EA Composer" style="margin-bottom:10px;" />
+                 </a> 
+                 </div>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll hidden visible-xs visible-md visible-lg"><a href="#why-eacomposer">Why EAComposer</a></li>
+                    <li class="page-scroll hidden visible-xs visible-md visible-lg"><a href="#prices">Prices</a></li>
+                    <li class="page-scroll hidden visible-xs"><a href="#our-users">Our Users</a></li>
+                    <li class="page-scroll hidden visible-xs"><a href="#happy-clients">Happy Clients</a></li>
+                    <li class="page-scroll hidden visible-xs"><a href="#get-in-touch">Get in Touch</a></li>
+                    <li class="menu-item dropdown open hidden visible-sm visible-md visible-lg"><a href="#more" class="dropdown-toggle" data-toggle="dropdown"><span class="hidden visible-md visible-lg">More <b class="caret"></b></span><span class="hidden visible-sm"><i class="fa fa-align-justify"></i></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="page-scroll  hidden visible-sm"><a href="#why-eacomposer">Why EAComposer</a></li>
+                            <li class="page-scroll  hidden visible-sm"><a href="#prices">Prices</a></li>
+                            <li class="page-scroll"><a href="#our-users">Our Users</a></li>
+                            <li class="page-scroll"><a href="#happy-clients">Happy Clients</a></li>
+                            <li class="page-scroll"><a href="#get-in-touch">Get in Touch</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="page-scroll" style="margin-right:5px;margin-left:5px;">
+                        <a class="btn btn-default" href="/solution/Login.aspx">Login</a>
+                    </li>
+                    <li class="page-scroll" style="margin-right:5px;margin-left:5px;">
+                        <a class="btn btn-default" href="/solution/signup.aspx">Signup</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+        <!-- Header -->
+        <header id="page-top" style="height:5px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <%--<div class="container body-content"></div>--%>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+        <!-- Footer -->
+        <footer class="text-center" id="get-in-touch">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-6 text-left">
+                            <h3>Get in touch</h3>
+                            <p>Please feel free to fill out this form if you need further details.</p>
+                            <div id="message-contact"></div>
+                            <form method="post" action="/mobile/SendContact" id="contactform" novalidate="novalidate" class="fv-form fv-form-bootstrap">
+                                <button type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control style_2" id="name_contact" name="name_contact" placeholder="Name" data-fv-field="name_contact"><i class="form-control-feedback fv-icon-no-label" data-fv-icon-for="name_contact" style="display: none;"></i>
+                                        </div>
+                                        <small class="help-block" data-fv-validator="notEmpty" data-fv-for="name_contact" data-fv-result="NOT_VALIDATED" style="display: none;">Name is required</small>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" id="phone_contact" name="phone_contact" class="form-control style_2" placeholder="Phone">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- End row -->
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" id="streetcity_contact" name="streetcity_contact" class="form-control style_2" placeholder="Street, City Zip">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group has-feedback">
+                                            <input type="email" id="email_contact" name="email_contact" class="form-control style_2" placeholder="Email" data-fv-field="email_contact"><i class="form-control-feedback fv-icon-no-label" data-fv-icon-for="email_contact" style="display: none;"></i>
+                                            <small class="help-block" data-fv-validator="notEmpty" data-fv-for="email_contact" data-fv-result="NOT_VALIDATED" style="display: none;">The email address is required</small><small class="help-block" data-fv-validator="emailAddress" data-fv-for="email_contact" data-fv-result="NOT_VALIDATED" style="display: none;">Not a valid email address</small>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- End row -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea rows="10" id="message_contact" name="message_contact" class="form-control style_2" placeholder="Write your message" style="height: 80px;"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End row -->
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group has-feedback">
+                                            <input type="text" id="verify_contact" name="verify_contact" class=" form-control style_2" placeholder="Are you human? 8 + 35 =" data-fv-field="verify_contact"><i class="form-control-feedback fv-icon-no-label" data-fv-icon-for="verify_contact" style="display: none;"></i>
+                                            <small class="help-block" data-fv-validator="callback" data-fv-for="verify_contact" data-fv-result="NOT_VALIDATED" style="display: none;">Wrong answer</small>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right" style="padding-right:15px;">
+                                        <input type="submit" class="btn btn-default" value="Send" id="submit-contact" disabled="disabled">
+                                    </div>
+                                </div>
+                                <!-- End row -->
+                            </form>
+                        </div>
+                        <div class="footer-col col-md-6 text-right">
+                            <h3>Learn & read more</h3>
+                            <ul style="list-style:none;">
+                                <li><a href="/togaf">TOGAF</a></li>
+                                <li><a href="/enterprise-architecture">Enterprise Architecture</a></li>
+                                <li><a href="/product-roadmap">Product Roadmap</a></li>
+                                <li><a href="/product-releases">Product Releases</a></li>
+                            </ul>
+                            <p><br /></p>
+                            <h3 style="margin-bottom: 10px;">Follow us</h3>
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="https://www.facebook.com/whitecloudsoftware/" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/eacomposer1" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/whitecloud-consulting-ltd-" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-12">
+                           <a href="http://www.whitecloudsoftware.ca/" target="_blank">&copy; 2016 - All rights reserved WhiteCloud Software Ltd.</a>
+                        </div>
+                        <div class="col-lg-5 col-xs-12">
+                           <a href="http://www.opengroup.org/" target="_blank">TOGAF™ is a registered trademark of The Open Group</a>
+                        </div>
+                        <div class="col-lg-3 col-xs-12">
+                           <i class="fa fa-lock"></i> <a href="#" target="_blank">Secure Site using SSL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+        <div class="scroll-top page-scroll visible-xs visible-sm">
+            <a class="btn btn-default" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+
+    </form>
+  
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+
+
+</body>
+</html>
