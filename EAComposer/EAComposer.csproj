@@ -175,6 +175,7 @@
     <Content Include="font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Project_Readme.html" />
     <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">

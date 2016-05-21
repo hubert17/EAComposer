@@ -5,7 +5,8 @@
  */
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
+$(function () {
+    $(".dropdown-toggle").attr("aria-expanded", "false");
     $('body').on('click', '.page-scroll a', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({

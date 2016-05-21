@@ -558,9 +558,11 @@ a {
         margin-top:-20px;
         /*overflow-x: hidden;*/
     }
-
+    .ea-bg {
+        margin-top: 10px;
+    }
     .fbox {
-        margin-top: -5px !important;
+        margin-top: 180px !important;
     }
 }
 
