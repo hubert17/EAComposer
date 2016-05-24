@@ -219,7 +219,7 @@
             </div>           
         </div>      
         <div class="container">
-              <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -230,21 +230,21 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                   <div class="item active">
-                    <img src="Content/images/screenshots/screen1.jpg" alt="Chania" width="1250" >
+                    <img src="Content/images/screenshots/screen1.jpg" width="1250" >
                       <div class="carousel-caption">
                           <p>Architecture Software that fully supports the TOGAF ADM</p>
                       </div>
                   </div>
 
                   <div class="item">
-                    <img src="Content/images/screenshots/screen2.jpg" alt="Chania" width="1250" >
+                    <img src="Content/images/screenshots/screen2.jpg" width="1250" >
                       <div class="carousel-caption">
                           <p>Create Enterprise Architecture Models & Diagrams</p>
                       </div>
                   </div>
     
                   <div class="item">
-                    <img src="Content/images/screenshots/screen3.jpg" alt="Flower" width="1250" >
+                    <img src="Content/images/screenshots/screen3.jpg" width="1250" >
                       <div class="carousel-caption">
                           <p>A Modern Interface and Responsive design</p>
                       </div>

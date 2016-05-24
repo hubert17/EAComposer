@@ -538,7 +538,9 @@ a {
     .feature-box {
         margin-bottom: 0;
     }
-
+    .signup-sect {        
+            margin-top:150px;
+    }
 }
 
 @media(max-width:991px) {
@@ -551,6 +553,9 @@ a {
     body {
         margin-top:-20px;
         /*overflow-x: hidden;*/
+    }
+    .signup-sect {        
+            margin-top:50px;
     }
 }
 @media (min-width:991px) and (max-width:1199px){
@@ -670,4 +675,53 @@ ul.mark-list li:before {
 
 .text-primary, .text-primary:hover {
     color: #666;
+}
+
+.signup-sect {        
+        font-size: 11pt !important;
+}
+.signup-sect a {
+    font-size: 11pt !important;
+    color: #888;
+}
+
+.signup-sect p {
+    font-size: 15px;
+}
+
+.signup li {
+    display: block;
+    margin-top: 8px;
+}
+
+.signup li:before
+{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e074";
+    font-family: 'Glyphicons Halflings';
+    font-size: 15px;
+    float: left;
+    margin-left: -25px;
+    margin-right: 10px;
+    color: #ffd324;
+}
+.modal-body {
+    max-height: calc(100vh - 212px);
+    overflow-y: auto;
+}
+
+#privacyModal .modal-body p {
+    font-size: 11pt;
+}
+
+.panel-default>.panel-heading {
+    color: #666 !important;
+}
+
+.form-control {
+    color: #666 !important;
+}
+
+.form-control:focus {
+  border-color: #CCCCCC;
 }
